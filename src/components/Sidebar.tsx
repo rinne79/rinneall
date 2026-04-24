@@ -94,12 +94,12 @@ export default function Sidebar({ isMobile = false }: SidebarProps) {
         <div className="h-18 flex items-center px-4 border-b border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-[14px] overflow-hidden shrink-0 border border-border-primary bg-bg-elevated shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]">
-              <img src="/command-center-mark.png" alt="Samins Command Center" className="w-full h-full object-cover" />
+              <img src="/command-center-mark.png" alt="Rinne Command Center" className="w-full h-full object-cover" />
             </div>
             {showLabels && (
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">Command Center</p>
-                <img src="/command-center-wordmark.png" alt="Samins Command Center" className="h-6 w-auto object-contain" />
+                <img src="/command-center-wordmark.png" alt="Rinne Command Center" className="h-6 w-auto object-contain" />
               </div>
             )}
           </div>
@@ -224,9 +224,9 @@ export default function Sidebar({ isMobile = false }: SidebarProps) {
           <div className="h-14 flex items-center px-4 border-b border-border">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-[14px] overflow-hidden shrink-0 border border-border-primary bg-bg-elevated shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]">
-                <img src="/command-center-mark.png" alt="Samins Command Center" className="w-full h-full object-cover" />
+                <img src="/command-center-mark.png" alt="Rinne Command Center" className="w-full h-full object-cover" />
               </div>
-              <img src="/command-center-wordmark.png" alt="Samins Command Center" className="h-6 w-auto object-contain" />
+              <img src="/command-center-wordmark.png" alt="Rinne Command Center" className="h-6 w-auto object-contain" />
             </div>
           </div>
 

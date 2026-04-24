@@ -1,5 +1,5 @@
 /**
- * Samins Command Center - Main Electron Entry Point
+ * Rinne Command Center - Main Electron Entry Point
  *
  * This file initializes and wires together all the modular components:
  * - Window management and protocol handling

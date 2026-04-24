@@ -3,13 +3,13 @@
 set -euo pipefail
 
 REPO="Samin12/claude-command-center-beta"
-ASSET_NAME="Samins-Command-Center-mac-arm64.dmg"
+ASSET_NAME="Rinne-Command-Center-mac-arm64.dmg"
 DOWNLOAD_URL="https://github.com/${REPO}/releases/latest/download/${ASSET_NAME}"
-APP_NAME="Samins Command Center.app"
+APP_NAME="Rinne Command Center.app"
 DEFAULT_INSTALL_DIR="/Applications"
 INSTALL_DIR="${DEFAULT_INSTALL_DIR}"
 SHOULD_OPEN=1
-TMP_DIR="$(mktemp -d /tmp/samins-command-center-install.XXXXXX)"
+TMP_DIR="$(mktemp -d /tmp/rinne-command-center-install.XXXXXX)"
 MOUNT_POINT=""
 
 cleanup() {
@@ -21,7 +21,7 @@ cleanup() {
 
 usage() {
   cat <<EOF
-Install the latest Samins Command Center release on macOS.
+Install the latest Rinne Command Center release on macOS.
 
 Usage:
   $0 [--install-dir /Applications] [--skip-open]
@@ -82,7 +82,7 @@ fi
 APP_DEST="${INSTALL_DIR}/${APP_NAME}"
 
 echo "Installing ${APP_NAME} to ${APP_DEST}..."
-osascript -e 'tell application "Samins Command Center" to quit' >/dev/null 2>&1 || true
+osascript -e 'tell application "Rinne Command Center" to quit' >/dev/null 2>&1 || true
 
 if [[ -w "${INSTALL_DIR}" ]]; then
   rm -rf "${APP_DEST}"
@@ -110,7 +110,7 @@ cat <<EOF
 Installed successfully.
 Location: ${APP_DEST}
 
-If Claude Code is already installed, you can start using Samins Command Center now.
+If Claude Code is already installed, you can start using Rinne Command Center now.
 If Claude Code is not installed yet, install it from:
 https://docs.anthropic.com/en/docs/claude-code/getting-started
 EOF

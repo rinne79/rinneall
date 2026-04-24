@@ -8,9 +8,9 @@ if [[ "${OSTYPE:-}" != darwin* ]]; then
 fi
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BUILD_DIR="$(mktemp -d /tmp/samins-command-center-build.XXXXXX)"
+BUILD_DIR="$(mktemp -d /tmp/rinne-command-center-build.XXXXXX)"
 INSTALL_DIR="/Applications"
-APP_NAME="Samins Command Center.app"
+APP_NAME="Rinne Command Center.app"
 SHOULD_OPEN=1
 SKIP_NPM_INSTALL=0
 
@@ -76,13 +76,13 @@ fi
 APP_DEST="$INSTALL_DIR/$APP_NAME"
 
 echo "Installing app to $APP_DEST..."
-osascript -e 'tell application "Samins Command Center" to quit' >/dev/null 2>&1 || true
+osascript -e 'tell application "Rinne Command Center" to quit' >/dev/null 2>&1 || true
 rm -rf "$APP_DEST"
 ditto "$APP_SOURCE" "$APP_DEST"
 xattr -cr "$APP_DEST" || true
 
 if [[ "$SHOULD_OPEN" -eq 1 ]]; then
-  echo "Opening Samins Command Center..."
+  echo "Opening Rinne Command Center..."
   open "$APP_DEST"
 fi
 

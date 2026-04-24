@@ -69,7 +69,7 @@ export function createWindow() {
     height: 1000,
     minWidth: 1200,
     minHeight: 800,
-    title: 'Samins Command Center',
+    title: 'Rinne Command Center',
     titleBarStyle: 'hiddenInset',
     backgroundColor: '#F5EEE6',
     ...(windowIconPath ? { icon: windowIconPath } : {}),

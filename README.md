@@ -1,19 +1,19 @@
-# Samins Command Center
+# Rinne Command Center
 
 A beautiful desktop app to orchestrate your [Claude Code](https://claude.ai/code) ,[Codex](https://chatgpt.com/codex), [Gemini](https://geminicli.com/) and local agents. Deploy, monitor, and debug — all from one delightful interface. Open source.
 
 [![Latest Release](https://img.shields.io/github/v/release/Samin12/claude-command-center-beta?label=latest%20release)](https://github.com/Samin12/claude-command-center-beta/releases/latest)
-[![Download macOS DMG](https://img.shields.io/badge/download-macOS%20DMG-black?logo=apple)](https://github.com/Samin12/claude-command-center-beta/releases/latest/download/Samins-Command-Center-mac-arm64.dmg)
+[![Download macOS DMG](https://img.shields.io/badge/download-macOS%20DMG-black?logo=apple)](https://github.com/Samin12/claude-command-center-beta/releases/latest/download/Rinne-Command-Center-mac-arm64.dmg)
 
-![Samins Command Center](screenshots/background-2.png)
+![Rinne Command Center](screenshots/background-2.png)
 
-![Samins Command Center Dashboard](screenshots/0.png)
+![Rinne Command Center Dashboard](screenshots/0.png)
 
 ## Installation
 
 ### Direct Download
 
-- macOS (Apple Silicon DMG): [Download the latest DMG](https://github.com/Samin12/claude-command-center-beta/releases/latest/download/Samins-Command-Center-mac-arm64.dmg)
+- macOS (Apple Silicon DMG): [Download the latest DMG](https://github.com/Samin12/claude-command-center-beta/releases/latest/download/Rinne-Command-Center-mac-arm64.dmg)
 - All releases: [github.com/Samin12/claude-command-center-beta/releases](https://github.com/Samin12/claude-command-center-beta/releases)
 
 ### macOS Install
@@ -21,7 +21,7 @@ A beautiful desktop app to orchestrate your [Claude Code](https://claude.ai/code
 Ask Claude Code:
 
 ```text
-Install Samins Command Center for me by running:
+Install Rinne Command Center for me by running:
 curl -fsSL https://raw.githubusercontent.com/Samin12/claude-command-center-beta/main/scripts/install-app.sh | bash
 ```
 
@@ -33,7 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/Samin12/claude-command-center-beta/
 
 What this does:
 - downloads the latest macOS release
-- copies `Samins Command Center.app` into `Applications`
+- copies `Rinne Command Center.app` into `Applications`
 - removes quarantine flags
 - opens the app
 
@@ -49,11 +49,11 @@ If Claude Code is not installed yet, install it once from Anthropic's setup guid
 After Claude Code is installed:
 - open any project folder in Terminal
 - run `claude` once
-- come back to Samins Command Center and your projects/history/usage will appear automatically
+- come back to Rinne Command Center and your projects/history/usage will appear automatically
 
 ### First-Launch Notes
 
-- Samins Command Center reads local Claude Code data from `~/.claude`
+- Rinne Command Center reads local Claude Code data from `~/.claude`
 - No extra setup is required just to browse local projects, sessions, history, and usage
 - GitHub CLI is only needed if you want GitHub-based automations
 - The Terminal installer above is the easiest macOS path because the app is not Apple-notarized
@@ -61,12 +61,12 @@ After Claude Code is installed:
 ### First-Launch Troubleshooting
 
 - macOS: if you used the Terminal installer, you should not need extra steps
-- macOS fallback: run `xattr -cr /Applications/Samins\ Command\ Center.app`
+- macOS fallback: run `xattr -cr /Applications/Rinne\ Command\ Center.app`
 - Windows: if SmartScreen warns, choose `More info` and then `Run anyway`
 
 ## Table of Contents
 
-- [Why Samins Command Center](#why-claude-command-center)
+- [Why Rinne Command Center](#why-claude-command-center)
 - [Core Features](#core-features)
 - [Automations](#automations)
 - [Kanban Task Management](#kanban-task-management)
@@ -86,9 +86,9 @@ After Claude Code is installed:
 
 ---
 
-## Why Samins Command Center
+## Why Rinne Command Center
 
-AI CLI tools are powerful — but it runs one agent at a time, in one terminal. Samins Command Center removes that limitation:
+AI CLI tools are powerful — but it runs one agent at a time, in one terminal. Rinne Command Center removes that limitation:
 
 - **Run 10+ agents simultaneously** across different projects and codebases
 - **Automate agent workflows** — trigger agents on GitHub PRs, issues, and external events
@@ -363,7 +363,7 @@ Same capabilities as Telegram, accessible via @mentions or direct messages.
 
 **Setup:**
 1. Go to [api.slack.com/apps](https://api.slack.com/apps) → **Create New App** → **From scratch**
-2. Name it "Samins Command Center" and select your workspace
+2. Name it "Rinne Command Center" and select your workspace
 3. **Socket Mode** → Enable → Generate App Token with scope `connections:write` (`xapp-...`)
 4. **OAuth & Permissions** → Add scopes: `app_mentions:read`, `chat:write`, `im:history`, `im:read`, `im:write`
 5. **Install to Workspace** → Copy Bot Token (`xoxb-...`)
@@ -429,7 +429,7 @@ All tools support cursor-based pagination for large result sets.
 
 ## Google Workspace
 
-Access Gmail, Drive, Sheets, Docs, Calendar, and more directly from your agents via the [Google Workspace CLI](https://github.com/googleworkspace/cli) (`gws`). Samins Command Center integrates `gws` as an MCP server so agents can read emails, manage files, create documents, and interact with Google APIs.
+Access Gmail, Drive, Sheets, Docs, Calendar, and more directly from your agents via the [Google Workspace CLI](https://github.com/googleworkspace/cli) (`gws`). Rinne Command Center integrates `gws` as an MCP server so agents can read emails, manage files, create documents, and interact with Google APIs.
 
 ### Setup
 
@@ -465,7 +465,7 @@ Additional services (Slides, Tasks, Chat, People, Forms, Keep) are available bas
 
 ## MCP Servers & Tools
 
-Samins Command Center exposes **five MCP (Model Context Protocol) servers** with **40+ tools** for programmatic agent control. These are used internally by the Super Agent and can be registered in any Claude Code session via `~/.claude/settings.json`.
+Rinne Command Center exposes **five MCP (Model Context Protocol) servers** with **40+ tools** for programmatic agent control. These are used internally by the Super Agent and can be registered in any Claude Code session via `~/.claude/settings.json`.
 
 ### mcp-orchestrator
 
@@ -603,7 +603,7 @@ cd claude-command-center-beta
 npm run electron:install:mac
 ```
 
-That command installs dependencies, builds the local Electron bundle, copies `Samins Command Center.app` into `/Applications` when possible, and opens it automatically.
+That command installs dependencies, builds the local Electron bundle, copies `Rinne Command Center.app` into `/Applications` when possible, and opens it automatically.
 
 ### Build from Source
 
@@ -619,7 +619,7 @@ npm run electron:release:win  # Windows installer build
 ```
 
 Output in `release/`:
-- **macOS**: `release/mac-arm64/Samins Command Center.app` (Apple Silicon) or `release/mac/Samins Command Center.app` (Intel)
+- **macOS**: `release/mac-arm64/Rinne Command Center.app` (Apple Silicon) or `release/mac/Rinne Command Center.app` (Intel)
 - DMG installer included
 
 ### Web Browser (Development)

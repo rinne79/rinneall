@@ -199,9 +199,9 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         </button>
         <div className="flex items-center gap-2 ml-2">
           <div className="w-8 h-8 rounded-[12px] overflow-hidden shrink-0 border border-border-primary bg-bg-elevated">
-            <img src="/command-center-mark.png" alt="Samins Command Center" className="w-full h-full object-cover" />
+            <img src="/command-center-mark.png" alt="Rinne Command Center" className="w-full h-full object-cover" />
           </div>
-          <span className="text-base font-semibold tracking-[-0.03em] text-foreground" style={{ fontFamily: "'Manrope', 'Inter', sans-serif" }}>Samins Command Center</span>
+          <span className="text-base font-semibold tracking-[-0.03em] text-foreground" style={{ fontFamily: "'Manrope', 'Inter', sans-serif" }}>Rinne Command Center</span>
         </div>
       </div>
 
@@ -254,12 +254,12 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-[14px] overflow-hidden shrink-0 border border-border-primary bg-bg-elevated">
-                  <img src="/command-center-mark.png" alt="Samins Command Center" className="w-full h-full object-cover" />
+                  <img src="/command-center-mark.png" alt="Rinne Command Center" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Update Available</h3>
                   <p className="text-sm text-muted-foreground">
-                    Samins Command Center {updateInfo.latestVersion} is ready
+                    Rinne Command Center {updateInfo.latestVersion} is ready
                   </p>
                 </div>
               </div>

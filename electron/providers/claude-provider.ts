@@ -117,7 +117,7 @@ export class ClaudeProvider implements CLIProvider {
       }
     }
 
-    // Samins Command Center's CLAUDE.md via ~/.claude-command-center
+    // Rinne Command Center's CLAUDE.md via ~/.claude-command-center
     command += ` --add-dir '${os.homedir()}/.claude-command-center'`;
 
     // Prompt with skills directive

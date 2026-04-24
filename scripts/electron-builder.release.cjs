@@ -2,7 +2,7 @@ const { build } = require('../package.json');
 
 const releaseBuild = {
   ...build,
-  artifactName: 'Samins-Command-Center-${os}-${arch}.${ext}',
+  artifactName: 'Rinne-Command-Center-${os}-${arch}.${ext}',
   mac: {
     ...build.mac,
     target: ['dmg', 'zip'],
