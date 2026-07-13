@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusTube — Pomodoro + YouTube + To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🍅 FocusTube</h1>
+    <p class="tagline">Play any YouTube video. Focus 25, rest 5. The video pauses itself.</p>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: player + timer -->
+    <section class="main-col">
+      <div class="card video-card">
+        <div class="url-bar">
+          <input
+            id="videoUrl"
+            type="text"
+            placeholder="Paste a YouTube link (e.g. a 1-hour DJ mix) and press Load"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button id="loadBtn" class="btn btn-primary">Load</button>
+        </div>
+        <div class="player-wrap">
+          <div id="player"></div>
+          <div id="playerPlaceholder" class="player-placeholder">
+            <span>▶</span>
+            <p>Paste a YouTube link above to get started</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card timer-card" id="timerCard">
+        <div class="timer-mode" id="timerMode">Focus</div>
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="timer-status" id="timerStatus">Ready — press Start to begin a focus session</div>
+
+        <div class="timer-controls">
+          <button id="startPauseBtn" class="btn btn-primary">Start</button>
+          <button id="skipBtn" class="btn btn-ghost">Skip</button>
+          <button id="resetBtn" class="btn btn-ghost">Reset</button>
+        </div>
+
+        <div class="session-dots" id="sessionDots" aria-label="Completed focus sessions"></div>
+
+        <details class="settings">
+          <summary>Timer settings</summary>
+          <div class="settings-grid">
+            <label>Focus (min)
+              <input id="focusMin" type="number" min="1" max="180" value="25" />
+            </label>
+            <label>Short break (min)
+              <input id="breakMin" type="number" min="1" max="60" value="5" />
+            </label>
+            <label>Long break (min)
+              <input id="longBreakMin" type="number" min="1" max="90" value="15" />
+            </label>
+            <label>Long break every
+              <input id="roundsBeforeLong" type="number" min="2" max="12" value="4" />
+            </label>
+            <label class="check-row">
+              <input id="autoContinue" type="checkbox" checked />
+              Auto-start next session
+            </label>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- RIGHT: to-do list -->
+    <aside class="side-col">
+      <div class="card todo-card">
+        <div class="todo-head">
+          <h2>To-Do</h2>
+          <span class="todo-count" id="todoCount">0 left</span>
+        </div>
+        <form id="todoForm" class="todo-form">
+          <input id="todoInput" type="text" placeholder="Add a task…" autocomplete="off" />
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <ul id="todoList" class="todo-list"></ul>
+        <div class="todo-foot">
+          <button id="clearDone" class="btn btn-ghost btn-small">Clear completed</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
